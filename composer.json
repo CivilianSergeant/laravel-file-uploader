@@ -16,5 +16,12 @@
         "psr-4": {
             "Muhimel\\FileUploader\\Laravel\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Muhimel\\FileUploader\\Laravel\\FileUploaderServiceProvider"
+            ]
+        }
     }
 }
