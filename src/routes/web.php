@@ -1,6 +1,6 @@
 <?php
-    // MyVendor\contactform\src\routes\web.php
-    Route::get('hello', function(){
-        return 'Hello from the Muhimel/LaravelFileUploader form package';
+    Route::group(['namespace'=>'Muhimel\FileUploader\Laravel\Http\Controllers','middleware'=>['web']],function(){
+        Route::get('uploader', 'FileUploaderController@index');
     });
+    
 ?>
