@@ -1,0 +1,20 @@
+{
+    "name": "muhimel/laravel-file-uploader",
+    "description": "File Uploader Laravel Package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "muhimel",
+            "email": "mu.himel@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "muhimel/fileuploader":"v1.1.1.0-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Muhimel\\FileUploader\\Laravel\\": "src/"
+        }
+    }
+}
