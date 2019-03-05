@@ -43,4 +43,19 @@ class FileUploaderController extends Controller implements UploaderInterface
     {
 
     }
+
+    public function uploadProcess($category,$suffix=null) 
+    {
+        $this->category = $category;
+        
+        $suffix = explode(".",$suffix);
+        $suffix = implode("/",$suffix);
+
+        if($this->request->allowMethod(['post'])){
+            $targetDir = $_SERVER['DOCUMENT_ROOT'].$this->request->webroot.'webroot/uploads/'.((!empty($suffix))? $suffix.'/' : '');
+            Uploader::setOptions(['target_dir'=>$targetDir]);
+            Uploader::upload($this);
+        }
+        exit;
+    }
 }
